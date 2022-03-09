@@ -65,7 +65,7 @@ export default function App() {
                 Berhasil menyalin password!
             </div>
 
-            <div className="mb-10 max-w-md rounded-lg bg-white py-10 px-5 text-center shadow-lg transition-all dark:bg-slate-800 sm:px-10">
+            <div className="mb-8 max-w-md rounded-lg bg-white py-10 px-5 text-center shadow-lg transition-all dark:bg-slate-800 sm:px-10">
                 <label htmlFor="password">
                     <h1 className="mb-5 text-2xl font-bold text-slate-700 transition-all dark:text-white sm:text-3xl">Password Generator</h1>
                 </label>
