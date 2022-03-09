@@ -166,7 +166,7 @@ export default function App() {
                     </div>
                 </div>
                 <button
-                    className="mt-3 w-full rounded bg-slate-100 p-3 font-bold text-slate-700 shadow transition-all hover:scale-105 active:scale-100 dark:bg-slate-900 dark:text-slate-100 dark:shadow-none"
+                    className="mt-3 w-full rounded bg-gradient-to-r from-emerald-400 to-teal-500 p-3 font-bold text-slate-100 shadow transition-all hover:scale-105 active:scale-100 dark:bg-slate-900 dark:text-slate-100 dark:shadow-none"
                     onClick={() => setPassword(generatePassword(passLength, includeUppercase, includeNumber, includeSymbol))}
                 >
                     Buat
