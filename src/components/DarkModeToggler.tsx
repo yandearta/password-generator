@@ -22,7 +22,7 @@ export default function DarkModeToggle() {
             <button className="flex h-5 w-9 items-center rounded-full bg-slate-500 p-1" onClick={handleToggleDarkMode}>
                 <div
                     className="toggle-circle h-4 w-4 rounded-full bg-white dark:bg-slate-200"
-                    style={{ transform: darkMode.toString() && "translateX(0.75rem)" }}
+                    style={{ transform: darkMode && "translateX(0.75rem)" }}
                 ></div>
             </button>
             <span className="ml-2 text-sm">🌙</span>
