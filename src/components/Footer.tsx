@@ -2,7 +2,7 @@ import DarkModeToggler from "./DarkModeToggler"
 
 export default function Footer() {
     return (
-        <footer className="mt-3 flex items-center justify-between">
+        <footer className="flex items-center justify-between">
             <DarkModeToggler />
             <div className="text-slate-700 dark:text-slate-400">
                 made with <span className="text-red-600">&#10084;</span> by{" "}
