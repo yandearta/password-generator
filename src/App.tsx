@@ -34,6 +34,9 @@ export default function App() {
 
         if (characterAmount < 1) characterAmount = 18
 
+        // Limit panjang password ke 50 agar browser tidak freeze
+        if (characterAmount > 50) characterAmount = 50
+
         const password = []
         for (let i = 0; i < characterAmount; i++) {
             const randomChar = characters[Math.floor(Math.random() * characters.length)]
