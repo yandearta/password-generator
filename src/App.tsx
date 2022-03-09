@@ -27,23 +27,23 @@ export default function App() {
         const NUMBER_CHAR = "1234567890"
         const SYMBOL_CHAR = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 
-        let characters = LOWERCASE_CHAR
-        if (includeUpper) characters = characters.concat(UPPERCASE_CHAR)
-        if (includeNumbers) characters = characters.concat(NUMBER_CHAR)
-        if (includeSymbols) characters = characters.concat(SYMBOL_CHAR)
+        let combinedCharacters = LOWERCASE_CHAR
+
+        if (includeUpper) combinedCharacters += UPPERCASE_CHAR
+        if (includeNumbers) combinedCharacters += NUMBER_CHAR
+        if (includeSymbols) combinedCharacters += SYMBOL_CHAR
 
         if (characterAmount < 1) characterAmount = 18
 
         // Limit panjang password ke 50 agar browser tidak freeze
         if (characterAmount > 50) characterAmount = 50
 
-        const password = []
+        let password = ""
         for (let i = 0; i < characterAmount; i++) {
-            const randomChar = characters[Math.floor(Math.random() * characters.length)]
-            password.push(randomChar)
+            password += combinedCharacters.charAt(Math.floor(Math.random() * combinedCharacters.length))
         }
 
-        return password.join("")
+        return password
     }
 
     function handleCopy(password: string) {
