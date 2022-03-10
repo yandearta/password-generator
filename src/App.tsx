@@ -115,7 +115,7 @@ export default function App() {
                             min={1}
                             max={50}
                             value={passLength}
-                            onChange={(event) => setPassLength(parseInt(event.target.value))}
+                            onChange={(event) => setPassLength(event.target.value === "" ? "" : parseInt(event.target.value))}
                             className="w-2/6 rounded border dark:border-slate-900 dark:bg-slate-900"
                             aria-labelledby="password-length"
                         />
