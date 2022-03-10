@@ -5,9 +5,15 @@ interface Props {
 }
 
 export default function PasswordStrengthMeter({ password }: Props) {
-    const checkPassword = zxcvbn(password)
-    const score = checkPassword.score
-    const dividedScore = (score * 100) / 4
+    const getPasswordScore = (password: string) => {
+        if (password.length >= 12) {
+            return 4
+        }
+        const checkPassword = zxcvbn(password)
+        return checkPassword.score
+    }
+
+    const score = getPasswordScore(password)
 
     const passwordProps = () => {
         switch (score) {
@@ -50,7 +56,7 @@ export default function PasswordStrengthMeter({ password }: Props) {
             <div
                 className="h-full rounded-full transition-all"
                 style={{
-                    width: `${dividedScore}%`,
+                    width: `${(score * 100) / 4}%`,
                     background: `linear-gradient(to right, ${passwordProps().color[0]}, ${passwordProps().color[1]})`,
                 }}
             ></div>

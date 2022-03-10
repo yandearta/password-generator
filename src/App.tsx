@@ -33,11 +33,6 @@ export default function App() {
         if (includeNumbers) combinedCharacters += NUMBER_CHAR
         if (includeSymbols) combinedCharacters += SYMBOL_CHAR
 
-        if (characterAmount < 1) characterAmount = 18
-
-        // Limit panjang password ke 50 agar browser tidak freeze
-        if (characterAmount > 50) characterAmount = 50
-
         let password = ""
         for (let i = 0; i < characterAmount; i++) {
             password += combinedCharacters.charAt(Math.floor(Math.random() * combinedCharacters.length))
