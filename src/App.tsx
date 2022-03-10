@@ -6,7 +6,7 @@ import Footer from "./components/Footer"
 import PasswordStrengthMeter from "./components/PasswordStrengthMeter"
 
 export default function App() {
-    const [passLength, setPassLength] = useState(18)
+    const [passLength, setPassLength] = useState<number | string>(18)
     const [includeUppercase, setIncludeUppercase] = useState(true)
     const [includeNumber, setIncludeNumber] = useState(true)
     const [includeSymbol, setIncludeSymbol] = useState(true)
